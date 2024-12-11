@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Yeni Çalışan Ekle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Yeni Çalışan Ekle</h1>
+	<form action="/employees/save" method="post">
+	    <label for="name">Ad:</label>
+	    <input type="text" id="name" name="name" required>
+	
+	    <label for="department">Departman:</label>
+	    <input type="text" id="department" name="department" required>
+	
+	    <label for="email">Email:</label>
+	    <input type="email" id="email" name="email" required>
+	
+	    <label for="salary">Maaş:</label>
+	    <input type="number" id="salary" name="salary" step="0.01" required>
+	
+	    <button type="submit">Kaydet</button>
+	</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Çalışan Güncelle</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <h1>Çalışan Güncelle</h1>
+    <form th:action="@{/employees/update/{id}(id=${employee.id})}" method="post">
+        <label>Ad:</label>
+        <input type="text" name="name" th:value="${employee.name}"><br>
+        <label>Departman:</label>
+        <input type="text" name="department" th:value="${employee.department}"><br>
+        <label>Email:</label>
+        <input type="email" name="email" th:value="${employee.email}"><br>
+        <label>Maaş:</label>
+        <input type="number" name="salary" step="0.01" th:value="${employee.salary}"><br>
+        <button type="submit">Güncelle</button>
+    </form>
+</body>
+</html>
